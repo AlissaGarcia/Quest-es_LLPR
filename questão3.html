@@ -1,0 +1,25 @@
+<script>
+
+alert("Vamos calcular a média de alguns números somente se eles forem pares")
+
+let media = 0
+let par = 0
+let num 
+
+while(num != 0){
+
+    num = Number(prompt("Digite um número"))
+
+    if (num%2==0 && num !== 0) {
+
+        media += num
+        par++
+    }
+
+
+}
+alert("Média dos " +par+ " valores pares = " +(media/par))
+
+
+
+</script>

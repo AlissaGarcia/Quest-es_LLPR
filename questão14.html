@@ -1,0 +1,41 @@
+<script>
+
+
+alert("Vamos fazer calculos com alguns números que você digite")
+
+let num 
+let media = 0
+let valorespositv = 0
+let valoresnegatv = 0
+let percentualpositv = 0
+let percentualnegatv = 0
+let contador = 0 
+
+
+while (num!=0) {
+
+    num = Number(prompt("Informe um número"))
+
+    contador ++
+    media += num
+    
+    if(num>0){
+
+        valorespositv ++
+
+    }else{
+
+        valoresnegatv++
+
+    }
+
+
+}
+
+alert("Quantidade de números positivos " +valorespositv)
+alert("Quantidade de números negativos " +valoresnegatv)
+alert("Média dos valores lidos" +media)
+
+
+
+</script>

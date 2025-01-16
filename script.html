@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula_2</title>
+    <link rel="stylesheet" href="css.css"> 
+</head>
+<body>
+    
+    <h1>Olá mundo!!</h1>
+
+    <script>
+
+    
+/*
+        for(let i=1; i<11; i++){
+
+            alert("Olá, mundo" + i)
+
+        }
+        
+    */
+
+   /* let i = 0
+    while(i<10){
+
+        alert("Olá, mundo" + i)
+
+  i++;
+
+    }
+*/
+
+ /* let i =0
+  do{
+
+    alert("Olá, mundo" + i)
+
+    i++;
+
+  }while(i<10);
+
+
+
+let soma = 0
+let cont = 0
+
+for(let i = 0; i<10; i++){
+
+    if(i%2==0){
+        
+        cont ++
+        soma += i
+
+    }
+
+
+}
+
+alert("Soma = " + soma)
+alert("Quantidade de números pares " + cont)
+
+
+*/
+
+let homem = 0
+let alturamulher = 0
+let mulher = 0 
+
+for(let i= 1; i<=5; i++){
+
+
+    let altura = Number(prompt("Informe a altura da pessoa " +i))
+    const sexo = prompt("Informe o sexo da pessoa em M ou F " +i)
+
+    if(sexo == "m" || sexo == "M"){
+
+        homem ++
+
+    }
+
+    if(sexo == "f" || sexo == "F"){
+
+mulher ++ 
+alturamulher += altura
+
+
+}
+
+
+}
+
+
+
+alert("Das quinze pessoas somente " +homem+ " são homens")
+alert("A média dos valores das alturas de todas as mulheres = " +(alturamulher/mulher))
+
+
+
+    </script>
+
+</body>
+</html>
