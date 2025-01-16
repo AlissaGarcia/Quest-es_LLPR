@@ -3,19 +3,21 @@
 
 alert("Vou contabilzar seus números até que você digite um valor negativo")
 
-let num 
+let num = 0
 let soma = 0
+let contagem = 0
 
-while (num > 0) {
+while (num >= 0) {
     
     num = Number(prompt("Digite um número"))
 
     soma += num
 
+    contagem ++
 
 }
 
-alert("a soma dos seus" +num+ "números foi " +soma)
+alert("a soma dos seus " +contagem+ " números foi " +soma)
 
 
 </script>
