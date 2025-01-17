@@ -1,0 +1,67 @@
+<script>
+
+alert("Vamos calcular a média aritmética de 3 notas de alunos de uma classe, para parar o programa, digite -1")
+
+let soma_notas = 0
+let media 
+let nota1 = 0
+let nota2 = 0
+let nota3 = 0
+let contagem = 0 
+let aluno = 0
+
+
+    
+
+while(aluno != -1){
+
+    aluno = prompt("Digite o nome do aluno ou -1 para parar o programa")
+    nota1 = Number(prompt("Digite a primeira nota do aluno: " +aluno))
+
+    
+
+    if (nota1 < 0 || nota1 > 10) {
+
+        alert("Digite um número ente 0 e 10!")
+
+    }else{
+
+        soma_notas ++
+        nota2 = Number(prompt("Digite a segunda nota do aluno: " +aluno))
+
+    if (nota2 < 0 || nota2 > 10) {
+
+        alert("Digite um número ente 0 e 10!")
+
+    }else{
+
+        
+        nota3 = Number(prompt("Digite a terceira nota do aluno: " +aluno))
+
+    if (nota3 < 0 || nota3 > 10) {
+
+        alert("Digite um número ente 0 e 10!")
+
+    }else{
+        
+        
+        media = (nota1 + nota2 + nota3)/3
+        
+        alert("A média do Aluno " + aluno + " foi " + media)
+        
+
+    }
+        
+
+    }
+
+
+    }
+
+
+}
+
+
+
+
+</script>
