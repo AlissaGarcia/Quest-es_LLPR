@@ -15,51 +15,66 @@ let aluno = 0
 
 while(aluno != -1){
 
-    aluno = prompt("Digite o nome do aluno ou -1 para parar o programa")
-    nota1 = Number(prompt("Digite a primeira nota do aluno: " +aluno))
+    aluno = prompt("Digite o codigo do aluno ou -1 para parar o programa")
+
+    if(aluno === "-1"){
+
+        alert("Programa encerrado")
+
+    }else{
+
+        nota1 = Number(prompt("Digite a primeira nota do aluno: " +aluno))
 
     
 
-    if (nota1 < 0 || nota1 > 10) {
+if (nota1 < 0 || nota1 > 10) {
 
-        alert("Digite um número ente 0 e 10!")
+    alert("Digite um número ente 0 e 10!")
 
-    }else{
+}else{
 
-        soma_notas ++
-        nota2 = Number(prompt("Digite a segunda nota do aluno: " +aluno))
+    soma_notas ++
+    nota2 = Number(prompt("Digite a segunda nota do aluno: " +aluno))
 
-    if (nota2 < 0 || nota2 > 10) {
+if (nota2 < 0 || nota2 > 10) {
 
-        alert("Digite um número ente 0 e 10!")
+    alert("Digite um número ente 0 e 10!")
 
-    }else{
+}else{
 
-        
-        nota3 = Number(prompt("Digite a terceira nota do aluno: " +aluno))
+    
+    nota3 = Number(prompt("Digite a terceira nota do aluno: " +aluno))
 
-    if (nota3 < 0 || nota3 > 10) {
+if (nota3 < 0 || nota3 > 10) {
 
-        alert("Digite um número ente 0 e 10!")
+    alert("Digite um número ente 0 e 10!")
 
-    }else{
-        
-        
-        media = (nota1 + nota2 + nota3)/3
-        
-        alert("A média do Aluno " + aluno + " foi " + media)
-        
+}else{
+    
+    
+    media = (nota1 + nota2 + nota3)/3
+    
+    alert("A média do Aluno " + aluno + " foi " + media)
+    
 
-    }
-        
+}
+    
 
-    }
-
-
-    }
+}
 
 
 }
+
+
+
+    }
+
+
+
+  
+
+}
+
 
 
 
