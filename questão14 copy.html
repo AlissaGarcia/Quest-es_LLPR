@@ -1,0 +1,56 @@
+<script>
+
+//OK Funcionando
+
+alert("Você vai digitar \nAlguns número negativos \nAlguns números positivos\nE eu vou exibir algumas informações! \n Para parar o programa deixe o campo vazio e precione a tecla enter")
+
+let num 
+let contp = 0
+let contn = 0
+let neg = 0
+let pos = 0
+let parar = 0
+
+while (num !== parar) {
+
+    num = Number(prompt("Informe um número qualquer positivo ou negativo"))
+
+    
+    if (num < 0) {
+
+        contn ++
+        neg += num
+       
+
+    } else if(num > 0) {
+
+        contp ++
+        pos += num
+    
+        
+    }else if(num === 0){
+
+        alert("Programa encerrado!")
+
+
+    }else{
+
+        alert("Inválido")
+    }
+
+
+
+}
+    
+    let valor_total = neg + pos
+    let cont_total = contp + contn
+    let media = valor_total / cont_total
+    let perneg = contn * 100 / valor_total 
+    let perpos =  contp * 100 / valor_total 
+
+alert("Você digitou " +contp+ " números positivos e " +contn+ " números negativos")
+alert("A média dos valores digitados é " +media)
+alert("O percentual de números negativos em relação ao valor total foi: " +perneg+ "% \nO percentual de números positivos em relação ao valor total foi: " +perpos+ "%")
+
+
+</script>
