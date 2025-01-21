@@ -1,5 +1,7 @@
 <script>
 
+    //Ok Funcionando
+
 alert("Vou calcular a média aritmética de todos os números inteiros que você digitar!! \nAtenção!\nSe você digitar um número negativo o programa encerra")
 
 let contagem = 0
@@ -11,7 +13,7 @@ let numero = 0
 
 while(numero >= 0){
 
-    numero = prompt("Digite um número inteiro positivo qualquer: \nPara parar o programa digite qualque número negativo")
+    numero = Number(prompt("Digite um número inteiro positivo qualquer: \nPara parar o programa digite qualquer número negativo"))
 
     if(numero < 0){
 
@@ -19,7 +21,7 @@ while(numero >= 0){
 
     }else{
 
-        acumulativo =+ numero
+        acumulativo += numero
 
         contagem++
 

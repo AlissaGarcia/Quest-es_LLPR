@@ -1,6 +1,6 @@
 <script>
 
-
+//OK Funcionando
 alert("Vou contabilzar seus números até que você digite um valor negativo")
 
 let num = 0
@@ -8,12 +8,22 @@ let soma = 0
 let contagem = 0
 
 while (num >= 0) {
+
     
     num = Number(prompt("Digite um número"))
+
+    if (num < 0) {
+
+        alert("Programa encerrado!")
+        
+    }else{
 
     soma += num
 
     contagem ++
+
+
+    }
 
 }
 
