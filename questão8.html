@@ -1,0 +1,40 @@
+<script>
+
+    //Ok Funcionando
+
+    alert("Vamos escolher opções em um menu interativo")
+
+let opcao;
+
+do {
+    // Exibe as opções disponíveis no menu
+    opcao = Number(prompt(
+        "Escolha uma opção abaixo e digite um número:\n" +
+        "1. Exibir Olá Mundo \n" +
+        "2. Exibir uma frase secreta\n" +
+        "3. Sair\n" +
+        "Digite o número da sua escolha:"
+    ))
+
+ if (opcao === 1) {
+
+    alert("Olá Mundo")
+    
+ }else if(opcao === 2) {
+
+alert("Você é curioso em")
+    
+ }else if(opcao === 3){
+
+    alert("Programa encerrado")
+
+ }else{
+    
+    alert("Inválido")
+ }
+
+
+}while (opcao !== 3)
+
+
+</script>
