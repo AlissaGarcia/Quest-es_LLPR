@@ -1,0 +1,63 @@
+<script>
+
+//OK Funcionando
+
+alert("Vamos votar para eleições fictícias!\nTemos quatro Candidatos, São eles:\n  1. Inácio Messias\n  2. Jair Lula\n  3. Ciro Silva\n  4. Marina Gomes")
+
+let canditado = Infinity
+let cont_1 = 0
+let cont_2 = 0
+let cont_3 = 0
+let cont_4 = 0
+let cont_5 = 0
+let cont_6 = 0
+while (canditado !== 0 ) {
+    
+    canditado = Number(prompt("Vote em um dos candidatos no campo abaixo digitando o número conrrespondente:\nLembrando:\n  1. Inácio Messias\n  2. Jair Lula\n  3. Ciro Silva\n  4. Marina Gomes\nPara votar nulo ou branco:\n   5. Nulo\n   6. Branco "))
+
+    if (canditado === 1) {
+
+        cont_1 ++
+        alert("PRÓXIMO VOTO...")
+
+    } else if (canditado === 2) {
+
+        cont_2 ++
+        alert("PRÓXIMO VOTO...")
+
+    }else if (canditado === 3) {
+
+        cont_3 ++
+        alert("PRÓXIMO VOTO...")
+        
+    }else if (canditado === 4) {
+
+        cont_4 ++
+        alert("PRÓXIMO VOTO...")
+
+    }else if (canditado === 5) {
+
+        cont_5 ++
+        alert("PRÓXIMO VOTO...")
+
+    }else if (canditado === 6) {
+
+        cont_6 ++
+        alert("PRÓXIMO VOTO...")
+
+    }else if (canditado === 0) {
+
+        alert("Votação encerrada")
+
+    }else{
+
+        alert("Voto Inválido")
+
+    }
+
+}
+
+alert("A votação apurou os seguintes votos:\n  Candidato 1. Inácio Messias = " +cont_1+"\n  Candidato 2. Jair Lula = " +cont_2+"\n  Candidato 3. Ciro Silva = " +cont_3+"\n  Candidato 4. Marina Gomes = " +cont_4+ "\n   Total de brancos: " +cont_5+ "\n   Total de nulos: " +cont_6 )
+
+
+</script>
