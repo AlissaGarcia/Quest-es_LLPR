@@ -1,0 +1,47 @@
+<script>
+
+    //OK Funcionando
+
+alert("Você vai digitar vários números e eu vou exibir:\n A média dos números positivos\n A quantidade de números negativos\n       Para parar, digite 0")
+
+let num 
+let pos = 0 
+let neg = 0
+let acm_pos = 0
+
+
+while (num !== 0) {
+
+    num = Number(prompt("Digite um número"))
+
+    if (num > 0) {
+        
+        pos ++
+
+        acm_pos += num
+
+        alert("Digite outro número ou 0 para para o programa..")
+
+
+    } else if (num < 0 ) {
+         
+        neg ++
+        alert("Digite outro número ou 0 para para o programa..")
+
+    } else if(num === 0){
+
+        alert("Encerrado")
+
+    }else{
+
+        alert("Inválido")
+
+    }
+    
+}
+
+let media = acm_pos / pos
+
+alert("A média dos números positivos foi: " +media.toFixed(2)+ " A quantidade de números negativos foi: " +neg)
+
+</script>
