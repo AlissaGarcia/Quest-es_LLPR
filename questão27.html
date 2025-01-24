@@ -1,0 +1,57 @@
+<script>
+
+//Ok Funcionando
+
+alert("Vou simular um carrinho de compras!")
+
+alert("Os produtos disponíveis são os seguintes:\n  1.Maçã\n  2.Banana\n  3.Laranja.")
+
+let maca = 2
+let banana = 1.5
+let laranja = 3
+let contador_prod = 0
+let total_preco = 0
+let produto
+
+while (produto !== 0) {
+    
+    produto = Number(prompt("Digite o número correspondente a um produto e o adicione em seu carrinho:\n  1.Maçã (R$ 2,00)\n  2.Banana (R$ 1,50)\n  3.Laranja (R$ 3,00)\n  0.Encerra compras "))
+if (produto === 1) {
+    
+    alert ("Você adicionou uma maçã ao seu carrinho de compras")
+    contador_prod++
+    total_preco += maca
+
+
+} else if (produto === 2 ){
+
+    alert ("Você adicionou uma banana ao seu carrinho de compras")
+    contador_prod ++
+    total_preco += banana
+
+} else if(produto === 3){
+
+
+    alert("Você adicionou uma laranja ao seu carrinho de compras")
+    contador_prod++
+    total_preco+=laranja
+
+}else if(produto === 0){
+
+
+    alert("Você encerrou suas compras, vamos ver o proço total e a quantidade de produtos.")
+    
+}else{
+
+    alert("Inválido")
+
+}
+
+
+}
+
+alert("Você comprou um total de " +contador_prod+" produtos!\n Dirija-se ao caixa para pagar: R$" +total_preco.toFixed(2))
+
+
+
+</script>
