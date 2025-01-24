@@ -1,0 +1,42 @@
+<script>
+
+//Ok Funcionando
+
+alert("Você vai digitar notas de 0 à 10 e ao final eu vou dizer qual foi a média das notas ")
+
+let media = 0
+let notas
+let contador = 0
+let acumulo = 0
+
+while (notas !== 0) {
+
+    notas = Number(prompt("Digite uma nota:\nPara parar o programa apenas deixe o campo abaixo vazio e aperte ok"))
+
+if (notas<0 || notas>10) {
+    
+
+    alert("Digite um número ente 0 e 10!")
+
+}else if(notas === 0){
+
+    alert("Programa encerrado!")
+
+} else if(notas > 0 || notas<=10){
+
+    alert("Nota contabilizada, digite a próxima...")
+    contador++
+    acumulo += notas
+
+
+
+}
+
+    
+}
+
+media = acumulo / contador
+
+alert("A média das " +contador+ " notas que você digitou, foi: " +media.toFixed(2))
+
+</script>
