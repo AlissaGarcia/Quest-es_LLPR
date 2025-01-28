@@ -1,40 +1,40 @@
 <script>
 
-alert("Você vai digitar dois números inteiros e eu vou dizer quais os números múltiplos de cinco existente entre eles")
+// Ok funcionando
 
-let a = Number(prompt("Digite um número"))
-let b = Number(prompt("Digite um número"))
-let cont = 0
-
-for (let i = a; i <= b; i++) {
- 
-    if (i % 5 === 0) {
-        
-        alert(i)
-        cont ++
-
-  while (true) {
+    alert("Você vai digitar dois números inteiros e eu vou mostrar os múltiplos de 5 entre eles e quais são primos.");
+    
+    let a = Number(prompt("Digite o primeiro número inteiro:"))
+    let b = Number(prompt("Digite o segundo número inteiro:"))
+    let cont = 0
+    
+    if (a > b) {
+      let temp = a
+      a = b
+      b = temp
+    }
+    
    
     
-   alert("Os números primos são: ")
- if (i % i === 0 && i % 1 === 0) {
-   
-    alert(i)
- }
-
-        
+    for (let i = a; i <= b; i++) {
+      if (i % 5 === 0) {
+        alert("Múltiplo de cinco: " +i)
+        cont++
+    
+       
+        let divisores = 0
+    
+        for (let j = 1; j <= i; j++) {
+          if (i % j === 0) {
+            divisores++
+          }
+        }
+    
+        if (divisores === 2) { 
+          alert(+i+ " é um número primo");
+        }
+      }
     }
-   
-}
-
-}
-
-
-
-
-
-
-
-
-
-</script>
+    
+    alert(`Foram encontrados ${cont} números múltiplos de 5 entre ${a} e ${b}.`);
+    </script>
