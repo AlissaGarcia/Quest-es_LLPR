@@ -1,10 +1,68 @@
-<script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenação de Grupos</title>
+</head>
+<body>
+    <script>
+        alert("O programa a seguir irá ler 16 valores em quatro grupos: A, B, C, D. Em seguida, vou mostrar na ordem lida, na ordem crescente e na ordem decrescente!");
 
-let a
-let b
-let c
-let d
+        let grupos = []; // Lista para armazenar os grupos
 
+        for (let i = 0; i < 4; i++) {
+            let grupo = []; // Criação de um novo grupo
+            alert(`Digite os valores do grupo ${i + 1}`);
+            
+            grupo.push(Number(prompt("Digite um valor de A:")));
+            grupo.push(Number(prompt("Digite um valor de B:")));
+            grupo.push(Number(prompt("Digite um valor de C:")));
+            grupo.push(Number(prompt("Digite um valor de D:")));
 
+            grupos.push(grupo); // Adiciona o grupo à lista de grupos
+        }
 
-</script>
+        // Mostrando os grupos na ordem lida
+        let ordemLida = "Grupos na ordem lida:\n";
+        for (let i = 0; i < grupos.length; i++) {
+            ordemLida += `Grupo ${i + 1}: ${grupos[i].join(", ")}\n`;
+        }
+        alert(ordemLida);
+
+        // Mostrando os grupos em ordem crescente
+        let ordemCrescente = "Grupos em ordem crescente:\n";
+        for (let i = 0; i < grupos.length; i++) {
+            let grupoOrdenado = [...grupos[i]];
+            for (let j = 0; j < grupoOrdenado.length; j++) {
+                for (let k = j + 1; k < grupoOrdenado.length; k++) {
+                    if (grupoOrdenado[j] > grupoOrdenado[k]) {
+                        let temp = grupoOrdenado[j];
+                        grupoOrdenado[j] = grupoOrdenado[k];
+                        grupoOrdenado[k] = temp;
+                    }
+                }
+            }
+            ordemCrescente += `Grupo ${i + 1}: ${grupoOrdenado.join(", ")}\n`;
+        }
+        alert(ordemCrescente);
+
+        // Mostrando os grupos em ordem decrescente
+        let ordemDecrescente = "Grupos em ordem decrescente:\n";
+        for (let i = 0; i < grupos.length; i++) {
+            let grupoOrdenado = [...grupos[i]];
+            for (let j = 0; j < grupoOrdenado.length; j++) {
+                for (let k = j + 1; k < grupoOrdenado.length; k++) {
+                    if (grupoOrdenado[j] < grupoOrdenado[k]) {
+                        let temp = grupoOrdenado[j];
+                        grupoOrdenado[j] = grupoOrdenado[k];
+                        grupoOrdenado[k] = temp;
+                    }
+                }
+            }
+            ordemDecrescente += `Grupo ${i + 1}: ${grupoOrdenado.join(", ")}\n`;
+        }
+        alert(ordemDecrescente);
+    </script>
+</body>
+</html>
