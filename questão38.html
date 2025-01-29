@@ -1,0 +1,52 @@
+<script>
+
+let codigo_cidade = [5]
+let num_veiculo = [5]
+let num_acid = [5]
+let maior_acid = 0
+let menor_acid = Infinity
+let menor_acid_cod = 0
+let maior_acid_cod = 0
+let acumulo = 0
+let acumulo2 = 0
+let cont = 0
+let media2
+
+for (let i = 0; i < 5; i++) {
+    
+    codigo_cidade[i] = prompt("Digite o código da cidade: ")
+    num_veiculo[i] = Number(prompt("Digite a quantidade de veículos de passeio na cidade "+codigo_cidade[i]))
+    num_acid[i] =  Number(prompt("Digite o número de acidentes com vítimas na cidade: " +codigo_cidade[i]))
+if (num_acid[i] > maior_acid) {
+    
+    maior_acid = num_acid[i]
+    maior_acid_cod = codigo_cidade[i]
+
+}
+
+if (num_acid[i] < menor_acid) {
+    
+    menor_acid = num_acid[i]
+    menor_acid_cod = codigo_cidade[i]
+
+}
+
+ acumulo += num_veiculo[i]
+
+ if (num_veiculo[i] < 2000) {
+
+    acumulo2 += num_acid[i]
+    cont ++
+    
+ }
+    
+}
+media2 = acumulo2 / cont
+let media = acumulo/5
+
+
+document.write("<h1> O menor indice " +menor_acid+" está na cidade com o código: " +menor_acid_cod+"</h1>")
+document.write("<h1> A média dos veículos é "+media+"</h1>")
+document.write("<h1> A média dos acidentes nas cidades com menos de 2000 veículos= "+media2+"</h1>")
+
+</script>
