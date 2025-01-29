@@ -1,27 +1,48 @@
 <script>
 
-alert("Vamos mostrar o bônus dos clientes que fizeram boas compras no ano passado!")
 
-let nome_cliente = 0
+
+let nome_cliente = [4]
+let valor_compras = [4]
 let valor = 0
+inicio = " "
+while (inicio !== "s") {
 
-while (nome_cliente !== "s") {
+    inicio = prompt("Vamos mostrar o bônus dos clientes que fizeram boas compras no ano passado!\n Apenas aperte enter para continuar ou s minusculo para parar o programa")
 
-    if (nome_cliente !== "s") {
+   if (inicio === "s") {
+
+    alert("Programa Encerrado!")
+
+   }else{
+
+    for (let i = 0; i < 5; i++) {
+
+        nome_cliente[i] = prompt("Digite o nome ou código do " +(i+1)+"º cliente")
+        valor_compras[i] = prompt("Digite o valor das compras do "+(i+1)+"º cliente" )  
+
+        if (valor_compras[i] < 1000) {
+                 
+   document.write("<h3> Bônus de 10% para o cliente "+nome_cliente[i]+ " que comprou: R$"+valor_compras[i]+"\n esse cliente tem BÔNUS de: R$"+(valor_compras[i] * 0.1).toFixed(2)+"</h3>")
+
+        }  else{
+
+            document.write("<h3> Bônus de 15% para o cliente "+nome_cliente[i]+ " que comprou: R$"+valor_compras[i]+"\n esse cliente tem BÔNUS de: R$"+(valor_compras[i] * 0.15).toFixed(2)+"</h3>")
+
+
+
+        }   
         
-        nome_cliente = prompt("Digite o nome do cliente:\n Para parar o programa digite s minúsculo")
-        valor = Number(prompt("Digite o valor das compras do cliente no ano passado: "))
-        
-
-
-
-
-    }else if(nome_cliente === "s"){
-
-        alert("Programa encerrado")
-
     }
-    
+
+   
+
+   }
+ 
+  
+
+
+
 }
 
 
