@@ -1,0 +1,33 @@
+<script>
+
+//OK Funcionando
+
+let aluno = [];
+let altura = [];
+let alto = 0;
+let baixo = Infinity;
+let alunoAlto = 0;
+let alunoBaixo = 0;
+
+for (let i = 0; i < 10; i++) {
+    aluno[i] = parseInt(prompt("Digite o número do aluno"));
+    altura[i] = parseInt(prompt("Digite a altura do aluno " + aluno[i]));
+
+    if (altura[i] > alto) {
+        alto = altura[i];
+        alunoAlto = aluno[i];
+    }
+
+    if (altura[i] < baixo) {
+        baixo = altura[i];
+        alunoBaixo = aluno[i];
+    }
+}
+
+document.write(
+    "O aluno mais alto é o de número " + alunoAlto + " com " + alto + " cm de altura.<br>"
+);
+document.write(
+    "O aluno mais baixo é o de número " + alunoBaixo + " com " + baixo + " cm de altura."
+);
+</script>
