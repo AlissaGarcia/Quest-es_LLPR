@@ -1,0 +1,67 @@
+<script>
+
+//ok funcionando
+
+    alert("Você vai digitar pares de valores e eu vou mostrar os números pares existentes entre eles")
+
+let par1 = [1]
+let par2 = [1]
+let par3 = [1]
+let par4 = [1]
+let par5 = [1]
+
+valores_p1 = [ ]
+valores_p2 = [ ]
+valores_p3 = [ ]
+valores_p4 = [ ]
+valores_p5 = [ ]
+   
+    par1[0]= prompt("Digite o 1º valor do par 1")
+    par1[1]= prompt("Digite o 2º valor do par 1")
+    par2[0]= prompt("Digite o 1º valor do par 2")
+    par2[1]= prompt("Digite o 2º valor do par 2")
+    par3[0]= prompt("Digite o 1º valor do par 3")
+    par3[1]= prompt("Digite o 2º valor do par 3")
+    par4[0]= prompt("Digite o 1º valor do par 4")
+    par4[1]= prompt("Digite o 2º valor do par 4")
+    par5[0]= prompt("Digite o 1º valor do par 5")
+    par5[1]= prompt("Digite o 2º valor do par 5")
+    
+    for (let i = par1[0]; i <= par1[1]; i++) {
+        if (i % 2 === 0) {
+            valores_p1.push(i);
+        }
+    }
+
+   
+    for (let j = par2[0]; j <= par2[1]; j++) {
+        if (j % 2 === 0) {
+            valores_p2.push(j);
+        }
+    }
+
+    for (let k = par3[0]; k <= par3[1]; k++) {
+        if (k % 2 === 0) {
+            valores_p3.push(k);
+        }
+    }
+    for (let l = par4[0]; l <= par4[1]; l++) {
+        if (l % 2 === 0) {
+            valores_p4.push(l);
+        }
+    }
+    for (let m = par5[0]; m <= par5[1]; m++) {
+        if (m % 2 === 0) {
+            valores_p5.push(m);
+        }
+    }
+
+  
+    document.write("<h3>Números pares entre " + par1[0] + " e " + par1[1] + ": " + valores_p1.join(", ") + "</h3>");
+    document.write("<h3>Números pares entre " + par2[0] + " e " + par2[1] + ": " + valores_p2.join(", ") + "</h3>");
+    document.write("<h3>Números pares entre " + par3[0] + " e " + par3[1] + ": " + valores_p3.join(", ") + "</h3>");
+    document.write("<h3>Números pares entre " + par4[0] + " e " + par4[1] + ": " + valores_p4.join(", ") + "</h3>");
+    document.write("<h3>Números pares entre " + par5[0] + " e " + par5[1] + ": " + valores_p5.join(", ") + "</h3>");
+
+
+</script>
