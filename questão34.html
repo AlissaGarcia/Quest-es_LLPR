@@ -1,69 +1,48 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordenação de Grupos</title>
-</head>
-<body>
-    <script>
-        alert("O programa a seguir irá ler 16 valores em quatro grupos: A, B, C, D. Em seguida, vou mostrar na ordem lida, na ordem crescente e na ordem decrescente!");
+<script>
 
-        let grupos = []; // Lista para armazenar os grupos
+    alert("Você vai digitar quatro números para armazenar nos conjuntos de A, B, C e D")
 
-        for (let i = 0; i < 4; i++) {
-            let grupo = []; // Criação de um novo grupo
-            alert(`Digite os valores do grupo ${i + 1}`);
-            
-            grupo.push(Number(prompt("Digite um valor de A:")));
-            grupo.push(Number(prompt("Digite um valor de B:")));
-            grupo.push(Number(prompt("Digite um valor de C:")));
-            grupo.push(Number(prompt("Digite um valor de D:")));
+let a = [3]
+let b = [3]
+let c = [3]
+let d = [3]
+let crescente_A
+let crescente_B
+let crescente_C
+let crescente_D
 
-            grupos.push(grupo); // Adiciona o grupo à lista de grupos
-        }
+for (let i = 0; i < 4; i++) {
+   
+    a[i] = prompt("Digite o " +(i+1)+ "º número de A")
+    b[i] = prompt("Digite o " +(i+1)+ "º número de B")
+    c[i] = prompt("Digite o " +(i+1)+ "º número de C")
+    d[i] = prompt("Digite o " +(i+1)+ "º número de D")
+}
 
-        // Mostrando os grupos na ordem lida
-        let ordemLida = "Grupos na ordem lida:\n";
-        for (let i = 0; i < grupos.length; i++) {
-            ordemLida += `Grupo ${i + 1}: ${grupos[i].join(", ")}\n`;
-        }
-        alert(ordemLida);
+document.write ("<h3> Os números escritos na ordem em que foram digitados são:")
+document.write ("<h3>Conjunto de A: " +a[0]+"; "+a[1]+"; "+a[2]+"; "+a[3])
+document.write ("<h3>Conjunto de B: " +b[0]+"; "+b[1]+"; "+b[2]+"; "+b[3])   
+document.write ("<h3>Conjunto de C: " +c[0]+"; "+c[1]+"; "+c[2]+"; "+c[3])
+document.write ("<h3>Conjunto de D: " +d[0]+"; "+d[1]+"; "+d[2]+"; "+d[3])
+    let aCrescente = [...a].sort((x, y) => x - y);
+    let bCrescente = [...b].sort((x, y) => x - y);
+    let cCrescente = [...c].sort((x, y) => x - y);
+    let dCrescente = [...d].sort((x, y) => x - y);
 
-        // Mostrando os grupos em ordem crescente
-        let ordemCrescente = "Grupos em ordem crescente:\n";
-        for (let i = 0; i < grupos.length; i++) {
-            let grupoOrdenado = [...grupos[i]];
-            for (let j = 0; j < grupoOrdenado.length; j++) {
-                for (let k = j + 1; k < grupoOrdenado.length; k++) {
-                    if (grupoOrdenado[j] > grupoOrdenado[k]) {
-                        let temp = grupoOrdenado[j];
-                        grupoOrdenado[j] = grupoOrdenado[k];
-                        grupoOrdenado[k] = temp;
-                    }
-                }
-            }
-            ordemCrescente += `Grupo ${i + 1}: ${grupoOrdenado.join(", ")}\n`;
-        }
-        alert(ordemCrescente);
+    document.write("<h3> Os números escritos na ordem crescente são:</h3>");
+    document.write("<h3>Conjunto de A: " + aCrescente.join("; ") + "</h3>");
+    document.write("<h3>Conjunto de B: " + bCrescente.join("; ") + "</h3>");
+    document.write("<h3>Conjunto de C: " + cCrescente.join("; ") + "</h3>");
+    document.write("<h3>Conjunto de D: " + dCrescente.join("; ") + "</h3>");
 
-        // Mostrando os grupos em ordem decrescente
-        let ordemDecrescente = "Grupos em ordem decrescente:\n";
-        for (let i = 0; i < grupos.length; i++) {
-            let grupoOrdenado = [...grupos[i]];
-            for (let j = 0; j < grupoOrdenado.length; j++) {
-                for (let k = j + 1; k < grupoOrdenado.length; k++) {
-                    if (grupoOrdenado[j] < grupoOrdenado[k]) {
-                        let temp = grupoOrdenado[j];
-                        grupoOrdenado[j] = grupoOrdenado[k];
-                        grupoOrdenado[k] = temp;
-                    }
-                }
-            }
-            ordemDecrescente += `Grupo ${i + 1}: ${grupoOrdenado.join(", ")}\n`;
-        }
-        alert(ordemDecrescente);
-    </script>
-</body>
-</html>
+    let aDecrescente = [...a].sort((x, y) => y - x);
+    let bDecrescente = [...b].sort((x, y) => y - x);
+    let cDecrescente = [...c].sort((x, y) => y - x);
+    let dDecrescente = [...d].sort((x, y) => y - x);
 
+    document.write("<h3> Os números escritos na ordem decrescente são:</h3>");
+    document.write("<h3>Conjunto de A: " + aDecrescente.join("; ") + "</h3>");
+    document.write("<h3>Conjunto de B: " + bDecrescente.join("; ") + "</h3>");
+    document.write("<h3>Conjunto de C: " + cDecrescente.join("; ") + "</h3>");
+    document.write("<h3>Conjunto de D: " + dDecrescente.join("; ") + "</h3>");
+</script>
