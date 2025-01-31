@@ -1,0 +1,50 @@
+<script>
+    alert("A empresa contratou 15 funcionários temporários. De acordo com o valor das vendas mensais, os funcionários ganham pontos.");
+
+    let funcionario = [];
+    let pontosnov = [];
+    let pontosdez = [];
+    let pontosjan = [];
+    let pontostotal = [];
+    let mediapontos = [];
+    let todos_pontos = []; 
+    let maior_pontuacao = 0;
+    let funcionario_maior = "";
+    let mes_maior = "";
+
+    for (let i = 0; i < 3; i++) {
+        funcionario[i] = prompt("Digite o nome do Funcionário: ");
+        pontosnov[i] = Number(prompt("Digite quantos pontos o funcionário " + funcionario[i] + " fez no mês de novembro"));
+        pontosdez[i] = Number(prompt("Digite quantos pontos o funcionário " + funcionario[i] + " fez no mês de dezembro"));
+        pontosjan[i] = Number(prompt("Digite quantos pontos o funcionário " + funcionario[i] + " fez no mês de janeiro"));
+
+        pontostotal[i] = pontosnov[i] + pontosdez[i] + pontosjan[i];
+        mediapontos[i] = pontostotal[i] / 3;
+
+       
+        todos_pontos[i * 3] = pontosnov[i];
+        todos_pontos[i * 3 + 1] = pontosdez[i];
+        todos_pontos[i * 3 + 2] = pontosjan[i];
+
+        if (pontosnov[i] > maior_pontuacao) {
+            maior_pontuacao = pontosnov[i];
+            funcionario_maior = funcionario[i];
+            mes_maior = "Novembro";
+        }
+        if (pontosdez[i] > maior_pontuacao) {
+            maior_pontuacao = pontosdez[i];
+            funcionario_maior = funcionario[i];
+            mes_maior = "Dezembro";
+        }
+        if (pontosjan[i] > maior_pontuacao) {
+            maior_pontuacao = pontosjan[i];
+            funcionario_maior = funcionario[i];
+            mes_maior = "Janeiro";
+        }
+
+        document.write("<h4> O funcionário " + funcionario[i] + " fez, ao total, " + pontostotal[i] + " pontos. Tendo como média final de pontos um total de " + mediapontos[i] + " pontos. </h4>");
+    }
+
+    document.write("<h3> O funcionário com a maior pontuação foi " + funcionario_maior + " no mês de " + mes_maior + " com " + maior_pontuacao + " pontos. </h3>");
+
+</script>
