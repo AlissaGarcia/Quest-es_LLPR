@@ -1,0 +1,63 @@
+<script>
+//Ok Funcionando
+alert("A prefeitura vai fazer uma pesquisa, responda as perguntas a seguir que eu mostrarei os resultados:")
+
+let cidadao = 0
+let salario = 0
+let filhos = 0
+let parar = 0
+let contagem_cid = 0
+let maior_sal = 0
+let acum_sal = 0
+let media_sal = 0
+let media_fi = 0
+let perc = 0
+let miseria = 0
+
+
+while (parar !== "s") {
+
+    parar = prompt("Para continuar, digite 0, para parar o programa digite s minúsculo")
+ 
+if (parar === "s") {
+
+    alert("Programa encerrado")
+
+ }else{
+
+    cidadao = prompt("Digite seu nome: ")
+    alert("Olá querido cidadão: " +cidadao+ " Responda as perguntas a seguir: ")
+    salario = Number(prompt("Digite o seu salário em número: "))
+    filhos = Number(prompt("Digite quantos filhos você tem "))
+
+    if (salario > maior_sal) {
+        
+        maior_sal = salario
+    }
+    
+    
+   
+ acum_sal += salario
+ contagem_cid ++
+
+ media_sal = acum_sal / contagem_cid
+ media_fi = filhos / contagem_cid
+
+ if (salario < 100) {
+    
+    miseria ++
+    perc = contagem_cid * 100 / miseria 
+
+ }
+
+
+
+ }
+  
+   
+}
+
+
+alert ("O maior salário foi: "  + maior_sal+ " \nO acúmulo de todos os salários foi: " +acum_sal+ "\nA contagem de cidadãos foi: " +contagem_cid+ "\nA média dos valores dos salários dos cidadãos foi: " +media_sal+ "\nA média da quantidade de filhos foi: " +media_fi)
+alert("Percentual de pessoas que ganham menos de 100 reais: " +perc+ " %" )
+</script>

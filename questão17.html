@@ -1,0 +1,31 @@
+<script>
+
+//ok funcionando
+alert("Você vai digitar alguns números e eu vou mostrar\n O maior entre eles e\n O menor entre ele")
+
+let cont = 0
+let num = 0
+let maior = 0
+let menor = Infinity
+while (cont < 10) {
+    
+num = Number(prompt("Digite uns números"))
+
+if (num > maior) {
+    
+    maior = num
+
+}  else if(num < menor){
+
+    menor = num
+}
+
+
+cont ++
+
+}
+
+alert("O número maior é " +maior+  " O número menor é " +menor)
+
+
+</script>
