@@ -11,8 +11,51 @@
 alert("Vamos fazer calculos com notas de alunos de uma sala com 6 alunos")
 
 let aluno = []
-let notas = []
+let cont = 0
+let acumulo_notas = 0
+let notas1 = []
+let notas2 = []
 let media = []
+let rep = 0
+let exame = 0
+let apr = 0
+
+for (let i = 0; i < 6; i++) {
+    
+    aluno[i] = prompt("Digite o nome do aluno")
+    cont++
+    notas1[i] = Number(prompt("Digite a primeira nota do aluno " +aluno[i]))
+    notas2[i] = Number(prompt("Digite a segunda nota do aluno " +aluno[i]))
+    media[i] = (notas1[i] + notas2[i])/2
+    acumulo_notas += media[i]
+
+    if (media[i] <= 3) {
+
+        document.write("<h3>O aluno " +aluno[i]+ " foi reprovado com média: " +media[i]+"</h3>")
+        rep ++
+        
+    }else if (media[i] > 3 && media[i] <= 7){
+
+
+        document.write("<h3>O aluno " +aluno[i]+ " irá fazer o exame pois teve média: " +media[i]+"</h3>")
+       exame++
+
+    }else if( media[i] > 7 ){
+
+
+        document.write("<h3>O aluno " +aluno[i]+ " foi aprovado com média: " +media[i]+"</h3>")
+        apr++
+
+
+    }
+    
+}
+
+document.write("<h4> O total de alunos aprovados foram: " +apr+"<h4>")
+document.write("<h4> O total de alunos reprovados foram: " +rep+"<h4>")
+document.write("<h4> O total de alunos no exame foram: " +exame+"<h4>")
+document.write("<h4>A média da turma foi: " +(acumulo_notas/cont)+"<h4>")
+
 
 
     </script>
