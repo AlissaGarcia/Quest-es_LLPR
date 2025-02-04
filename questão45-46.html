@@ -1,0 +1,36 @@
+<script>
+
+// Exibe um alerta informando ao usuário sobre o programa
+alert("Sistema de Resfriamento de Leite: Informe a quantidade de leite entregue diariamente. O tanque tem capacidade máxima de 1000 litros.");
+
+// Definição da capacidade máxima do tanque e variável de controle
+const capacidadeMaxima = 1000;
+let quantidadeAtual = 0;
+
+// Loop para registro das entregas
+do {
+    let entrega = parseFloat(prompt("Informe a quantidade de leite entregue hoje (em litros):"));
+    
+    if (isNaN(entrega) || entrega <= 0) {
+        alert("Por favor, insira um valor válido e positivo.");
+        continue;
+    }
+    
+    if (quantidadeAtual + entrega > capacidadeMaxima) {
+        alert("Tanque de resfriamento cheio! Não é possível registrar mais leite.");
+        break;
+    }
+    
+    quantidadeAtual += entrega;
+    document.write(`<p>Quantidade total de leite no tanque: ${quantidadeAtual} litros</p>`);
+    
+    var continuar = prompt("Deseja registrar outra entrega de leite? (S/N):").toLowerCase();
+} while (continuar === 's' && quantidadeAtual < capacidadeMaxima);
+
+// Exibe a quantidade final armazenada
+document.write(`<p>Registro finalizado. Quantidade total de leite armazenada: ${quantidadeAtual} litros</p>`);
+
+
+
+
+</script>
