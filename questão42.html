@@ -1,0 +1,20 @@
+<script>
+alert("Este programa irá solicitar a altura de 15 pessoas e exibirá a menor e a maior altura do grupo.");
+
+let alturas = [];
+
+
+for (let i = 0; i < 15; i++) {
+    let altura = parseFloat(prompt("Digite a altura da pessoa" +(i + 1)));
+    alturas.push(altura);
+}
+
+// Calcula a menor e a maior altura
+let encontrarMenor = Math.min(...alturas);
+let encontrarMaior = Math.max(...alturas);
+
+
+document.write(`<p>A menor altura do grupo é: ${encontrarMenor} metros</p>`);
+document.write(`<p>A maior altura do grupo é: ${encontrarMaior} metros</p>`);
+
+</script>
